@@ -132,7 +132,7 @@ def get_or_save_image(src):
             temp_image.close()
             return retrieved_image
         else:
-            print(f"RECEIVED INVALID IMAGE RESPONSE: {src}")
+            print(f"RECEIVED INVALID IMAGE RESPONSE {response.status_code} {response.headers}: {src}")
     return existing_image
 
 
