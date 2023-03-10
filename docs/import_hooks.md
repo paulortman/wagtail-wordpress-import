@@ -158,7 +158,7 @@ def header_image_processor(imported_pages, data_tag, items_cache):
 
             # guid is the url of the image to fetch, the get_or_save_image()
             # function will fetch the image if it doesn't exist
-            image = get_or_save_image(attachment.get("guid"))
+            image = get_or_save_image(attachment.get("guid").strip())
 
             # update header_image field in all of the pages in
             # the queryset with the image object
